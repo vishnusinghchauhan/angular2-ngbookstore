@@ -1,0 +1,30 @@
+<div class="container">
+	<h3>Add Book</h3>
+
+	 <form #f="ngForm" novalidate>
+		<p>Title</p>
+		<input [(ngModel)]="book.title" name="title" type="text" class="form-control">
+
+		<p>Author</p>
+		<input [(ngModel)]="book.author" name="author" type="text" class="form-control">
+
+		<p>Publisher</p>
+		<input [(ngModel)]="book.publisher" name="publisher" type="text" class="form-control">
+
+		<p>Price</p>
+		<input [(ngModel)]="book.price" name="price" type="text" class="form-control">
+
+		<p>Category</p>
+		<input [(ngModel)]="book.category" name="category" type="text" class="form-control">
+
+		<p>Description</p>
+		<textarea [(ngModel)]="book.description" name="description" class="form-control" rows="3"></textarea>
+
+		<p>Cover URL</p>
+		<input [(ngModel)]="book.cover" name="cover" type="text" class="form-control">
+		
+		<br />
+		<button type="submit" (click)="addBook(f.value, f.valid)" class="btn btn-default">Submit</button>
+	  </form>
+
+</div>
